@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Base ──────────────────────────────────────────────────────────────────*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #191c1e;
+  background-color: #f7f9fb;
+}
+
+/* Material Symbols */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+  font-size: 1.25rem;
+  line-height: 1;
+  display: inline-block;
+}
+
+/* Glass header */
+.glass-header {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* Primary gradient */
+.primary-gradient {
+  background: linear-gradient(135deg, #006068 0%, #007b85 100%);
+}
+
+/* Background mesh for login */
+.bg-mesh {
+  background-color: #f7f9fb;
+  background-image:
+    radial-gradient(at 0% 0%, rgba(150, 241, 252, 0.18) 0px, transparent 55%),
+    radial-gradient(at 100% 100%, rgba(0, 96, 104, 0.06) 0px, transparent 55%);
+}
+
+/* Skeleton pulse animation */
+@keyframes skeleton-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.skeleton {
+  background: #e6e8ea;
+  border-radius: 0.5rem;
+  animation: skeleton-pulse 1.8s ease-in-out infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #bdc9ca; border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: #6e797a; }
+
+/* No scrollbar utility */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Selection */
+::selection { background: #96f1fc; color: #001f23; }
+
+/* Smooth transitions */
+a, button { transition: all 0.2s ease-out; }
