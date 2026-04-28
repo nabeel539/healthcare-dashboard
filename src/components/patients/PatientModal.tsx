@@ -10,16 +10,23 @@ interface PatientModalProps {
   initialData?: Patient;
 }
 
+interface PatientFormData {
+  name: string;
+  age: string;
+  gender: 'Male' | 'Female' | 'Other';
+  condition: string;
+}
+
 export const PatientModal: React.FC<PatientModalProps> = ({
   isOpen,
   onClose,
   onSubmit,
   initialData,
 }) => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<PatientFormData>({
     name: '',
     age: '',
-    gender: 'Male' as const,
+    gender: 'Male',
     condition: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
