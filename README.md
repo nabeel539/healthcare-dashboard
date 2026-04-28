@@ -23,8 +23,8 @@ A scalable frontend application built with React + TypeScript simulating a healt
 
 ## 🧪 Demo Credentials
 
-Email: [test@clinic.com](mailto:test@clinic.com)
-Password: 123456
+Email: [demo@clinic.com](mailto:demo@clinic.com)
+Password: password123
 
 ## 🚀 Live Demo
 
